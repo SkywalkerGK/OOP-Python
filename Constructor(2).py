@@ -1,9 +1,7 @@
 class Employee: 
 
-    def __init__(self):
+    def __init__(self,name,salary):
         print("Defalut Constructor")
-
-    def detail(self,name,salary):
         self.name = name
         self.salary = salary
 
@@ -11,6 +9,12 @@ class Employee:
         print("ชื่อพนักงาน {}".format(self.name))
         print("เงินเดือน {}".format(self.salary))
 
-obj1 = Employee()
-obj2 = Employee()
+    def __del__(self):
+        print("Destructor")
 
+obj1 = Employee("Sorawit",23000)
+obj2 = Employee("Namcha",50000)
+obj2.salary = 70000
+
+obj1.showData()
+obj2.showData()
