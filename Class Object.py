@@ -1,9 +1,17 @@
 class Employee:
-    def detail(self):
-        self.name = "Sorawit"
-        self.salary = 23000
+    def detail(self,name,salary):
+        self.name = name
+        self.salary = salary
+
+    def showData(self):
         print("ชื่อพนักงาน {}".format(self.name))
         print("เงินเดือน {}".format(self.salary))
-        
-emp1 = Employee()
-emp1.detail()
+
+obj1 = Employee()
+obj1.detail("Sorawit",23000)
+
+obj2 = Employee()
+obj2.detail("Namcha",30000)
+
+obj1.showData()
+obj2.showData()
