@@ -7,8 +7,10 @@ class Employee:
         #Private attribute
         self.__salary = salary
 
+        self.__showData()
+
     
-    def _showData(self):
+    def __showData(self):
         #Pubric Method
         print("ชื่อพนักงาน {}".format(self._name))
         #Private Method
@@ -18,6 +20,6 @@ class Employee:
 obj1 = Employee("Sorawit",23000)
 obj1._name = "Namcha"
 obj1.__salary = 50000
-obj1._showData()
+#obj1.__showData()  Private ภายนอกเอาไปสร้าง object เรียกใช้งานไม่ได้
 
 
